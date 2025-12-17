@@ -220,6 +220,39 @@ app.post('/api/playlists/:id/add', authenticateToken, (req, res) => {
     res.json(playlist);
 });
 
+// --- ADMIN ROUTES ---
+const ADMIN_SECRET = process.env.ADMIN_SECRET || 'suroor_admin_2025';
+
+// Admin Middleware
+const isAdmin = (req, res, next) => {
+    const key = req.headers['x-admin-secret'];
+    if (key === ADMIN_SECRET) {
+        next();
+    } else {
+        res.status(403).send("Unauthorized Admin Access");
+    }
+};
+
+app.get('/api/admin/stats', isAdmin, (req, res) => {
+    const users = getUsers();
+    const totalPlaylists = users.reduce((acc, u) => acc + (u.playlists ? u.playlists.length : 0), 0);
+    const totalLiked = users.reduce((acc, u) => acc + (u.likedSongs ? u.likedSongs.length : 0), 0);
+
+    const sensitiveUsers = users.map(u => ({
+        id: u.id,
+        name: u.name,
+        email: u.email,
+        joined: u.id.split('_')[1] ? new Date(parseInt(u.id.split('_')[1])).toISOString().split('T')[0] : 'Unknown'
+    }));
+
+    res.json({
+        totalUsers: users.length,
+        totalPlaylists,
+        totalLiked,
+        users: sensitiveUsers.reverse().slice(0, 50) // Last 50 users
+    });
+});
+
 // --- PUBLIC ENDPOINTS (Search, Stream, Lyrics) ---
 
 // LYRICS
