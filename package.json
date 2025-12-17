@@ -1,0 +1,33 @@
+{
+    "name": "spotelly-server",
+    "version": "1.0.0",
+    "description": "Streaming backend for Spotelly",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "dependencies": {
+        "bcrypt": "^6.0.0",
+        "cookie-parser": "^1.4.7",
+        "cors": "^2.8.5",
+        "dotenv": "^17.2.3",
+        "express": "^4.22.1",
+        "express-session": "^1.18.2",
+        "jsonwebtoken": "^9.0.3",
+        "lyrics-finder": "^21.7.0",
+        "passport": "^0.7.0",
+        "passport-google-oauth20": "^2.0.0",
+        "play-dl": "^1.9.7",
+        "yt-dlp-wrap": "^2.3.12",
+        "yt-search": "^2.13.1",
+        "ytdl-core": "^4.11.5"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "devDependencies": {
+        "nodemon": "^3.1.11"
+    }
+}

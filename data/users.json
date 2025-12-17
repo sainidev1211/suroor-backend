@@ -1,0 +1,128 @@
+[
+  {
+    "id": "mock_1765797358331",
+    "name": "Terminal User",
+    "email": "term@test.com",
+    "avatar": "https://ui-avatars.com/api/?name=Terminal%20User&background=ffbe0b&color=000",
+    "likedSongs": [],
+    "history": []
+  },
+  {
+    "id": "mock_1765797440550",
+    "name": "Browsy Test",
+    "email": "browsy@test.com",
+    "avatar": "https://ui-avatars.com/api/?name=Browsy%20Test&background=ffbe0b&color=000",
+    "likedSongs": [
+      {
+        "id": "fHBR1j1kJ1I",
+        "title": "Billionaire’s Brain vs Your Brain: Morning Routine, Focus & Addiction | Dr Sweta | FO403 Raj Shamani",
+        "artist": "Raj Shamani",
+        "cover": "https://i.ytimg.com/vi/fHBR1j1kJ1I/hq720.jpg",
+        "duration": "1:45:10",
+        "durationSec": 6310,
+        "source": "http://localhost:3001/stream?query=fHBR1j1kJ1I"
+      }
+    ],
+    "history": []
+  },
+  {
+    "id": "mock_1765798040975",
+    "name": "Dev Saini",
+    "email": "devs08107@gmail.com",
+    "avatar": "https://ui-avatars.com/api/?name=Dev%20Saini&background=ffbe0b&color=000",
+    "likedSongs": [
+      {
+        "id": "b4b1cMVZOUU",
+        "title": "Full Video: Hookah Bar | Khiladi 786 | Akshay Kumar & Asin | Himesh Reshammiya",
+        "artist": "T-Series",
+        "cover": "https://i.ytimg.com/vi/b4b1cMVZOUU/hq720.jpg",
+        "duration": "2:55",
+        "seconds": 175,
+        "source": "http://localhost:3001/stream?query=b4b1cMVZOUU"
+      },
+      {
+        "id": "NX5yDs_TLqA",
+        "title": "WORLD MUSIC DAY 2024 Full Album | 50 Nonstop Superhit Songs | Apna Bana Le, Taras, Tuu, Makhna &More",
+        "artist": "Zee Music Company",
+        "cover": "https://i.ytimg.com/vi/NX5yDs_TLqA/hq720.jpg",
+        "duration": "3:31:17",
+        "durationSec": 12677,
+        "source": "http://localhost:3001/stream?query=NX5yDs_TLqA"
+      }
+    ],
+    "history": []
+  },
+  {
+    "id": "mock_1765798073207",
+    "name": "Dev Saini",
+    "email": "Gandu08107@gmail.com",
+    "avatar": "https://ui-avatars.com/api/?name=Dev%20Saini&background=ffbe0b&color=000",
+    "likedSongs": [],
+    "history": []
+  },
+  {
+    "id": "mock_1765798096434",
+    "name": "gaaandu",
+    "email": "gandu08107@gmail.com",
+    "avatar": "https://ui-avatars.com/api/?name=gaaandu&background=ffbe0b&color=000",
+    "likedSongs": [],
+    "history": []
+  },
+  {
+    "id": "mock_1765799738187",
+    "name": "Soniya sharam",
+    "email": "saniyashrma11@gmail.com",
+    "mobile": "0987654321",
+    "age": "22",
+    "premium": true,
+    "avatar": "https://ui-avatars.com/api/?name=Soniya%20sharam&background=ffbe0b&color=000",
+    "likedSongs": [
+      {
+        "id": "s_SN6KDYjKY",
+        "title": "Top 50 Songs Global 2024 🌍",
+        "artist": "Global Records",
+        "cover": "https://i.ytimg.com/vi/s_SN6KDYjKY/hq720.jpg",
+        "duration": "2:16:01",
+        "durationSec": 8161,
+        "source": "http://localhost:3001/stream?query=s_SN6KDYjKY"
+      }
+    ],
+    "history": []
+  },
+  {
+    "id": "mock_1765865679411",
+    "name": "soniya ",
+    "email": "sania08107@gmail.com",
+    "mobile": "1234567890",
+    "age": "22",
+    "premium": true,
+    "avatar": "https://ui-avatars.com/api/?name=soniya%20&background=ffbe0b&color=000",
+    "likedSongs": [],
+    "playlists": [],
+    "history": []
+  },
+  {
+    "id": "mock_1765866749292",
+    "name": "soniya ",
+    "email": "saniabamni08107@gmail.com",
+    "mobile": "1234567890",
+    "age": "22",
+    "premium": true,
+    "avatar": "https://ui-avatars.com/api/?name=soniya%20&background=ffbe0b&color=000",
+    "likedSongs": [],
+    "playlists": [],
+    "history": []
+  },
+  {
+    "id": "mock_1765892658205",
+    "name": "soni",
+    "email": "soni08107@gmail.com",
+    "mobile": "1234567890",
+    "age": "22",
+    "premium": true,
+    "avatar": "https://ui-avatars.com/api/?name=soni&background=ffbe0b&color=000",
+    "likedSongs": [],
+    "playlists": [],
+    "history": []
+  }
+]
