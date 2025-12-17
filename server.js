@@ -67,12 +67,16 @@ const ytDlpBinaryPath = path.join(__dirname, 'yt-dlp');
 
 // Initializer: Check if binary exists, if not download it
 (async () => {
-    if (!fs.existsSync(ytDlpBinaryPath)) {
-        console.log('[Init] Downloading yt-dlp binary...');
-        await YTDlpWrap.downloadFromGithub(ytDlpBinaryPath);
-        console.log('[Init] Downloaded yt-dlp binary.');
-    } else {
-        console.log('[Init] yt-dlp binary found.');
+    try {
+        if (!fs.existsSync(ytDlpBinaryPath)) {
+            console.log('[Init] Downloading yt-dlp binary...');
+            await YTDlpWrap.downloadFromGithub(ytDlpBinaryPath);
+            console.log('[Init] Downloaded yt-dlp binary.');
+        } else {
+            console.log('[Init] yt-dlp binary found.');
+        }
+    } catch (err) {
+        console.error('[Init] Failed to download or verify yt-dlp binary:', err);
     }
 })();
 
@@ -314,6 +318,17 @@ app.get('/stream', async (req, res) => {
 });
 
 // Start Server
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`Backend running on port ${PORT}`);
+});
+
+// GLOBAL ERROR HANDLERS
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+    // Application specific logging, throwing an error, or other logic here
+});
+
+process.on('uncaughtException', (err) => {
+    console.error('Uncaught Exception thrown:', err);
+    // process.exit(1); // Optional: restart via PM2 or Render
 });
